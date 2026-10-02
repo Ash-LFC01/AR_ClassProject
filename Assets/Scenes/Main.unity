@@ -164,6 +164,8 @@ GameObject:
   - component: {fileID: 190574491}
   - component: {fileID: 190574490}
   - component: {fileID: 190574489}
+  - component: {fileID: 190574494}
+  - component: {fileID: 190574495}
   m_Layer: 0
   m_Name: XR Origin (Mobile AR)
   m_TagString: Untagged
@@ -186,7 +188,7 @@ MonoBehaviour:
   <trackablesChanged>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  m_RaycastPrefab: {fileID: 0}
+  m_RaycastPrefab: {fileID: 7937917413868064266, guid: f2d80a6f4248c944bb1d18d31161c90f, type: 3}
 --- !u!114 &190574490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +204,7 @@ MonoBehaviour:
   <trackablesChanged>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  m_PlanePrefab: {fileID: 0}
+  m_PlanePrefab: {fileID: 2978784871888065944, guid: 6f948cf1f2cbd9049bbc983e5fbab6bd, type: 3}
   m_DetectionMode: -1
 --- !u!114 &190574491
 MonoBehaviour:
@@ -250,6 +252,71 @@ Transform:
   - {fileID: 55847877}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &190574494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190574488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa228e3dd767e648821d26e06279290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARObjectPlace
+  raycastManager: {fileID: 190574489}
+  arCamera: {fileID: 2072874232}
+  snapBottomToFloor: 1
+  extraHeightOffset: 0
+  ease: 27
+--- !u!114 &190574495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190574488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2175b7fc8f5591f46b0c05710d011e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARObjectInteractionNewInput
+  arCamera: {fileID: 0}
+  raycastManager: {fileID: 0}
+  isPlacing: 0
+  interactableTag: ARObject
+  deselectWhenTapEmptySpace: 1
+  ignoreUITouches: 1
+  allowMove: 1
+  dragThreshold: 10
+  fallbackToHorizontalPlane: 1
+  preventObjectOverlap: 1
+  collisionIterations: 3
+  allowScale: 1
+  pinchSensitivity: 1
+  keyboardScaleStep: 0.1
+  mouseWheelScaleSpeed: 0.1
+  minScale: 0.2
+  maxScale: 3
+  allowRotation: 1
+  rotationSpeed: 1
+  rotationDeadZone: 0.05
+  keyboardRotationSpeed: 90
+  showGizmo: 1
+  gizmoShape: 1
+  gizmoScale: 1
+  gizmoColor: {r: 1, g: 1, b: 1, a: 0.9}
+  xAxisColor: {r: 1, g: 0, b: 0, a: 1}
+  yAxisColor: {r: 0, g: 1, b: 0, a: 1}
+  zAxisColor: {r: 0, g: 0, b: 1, a: 1}
+  rotationRingColor: {r: 1, g: 1, b: 1, a: 1}
+  gizmoLineWidth: 0.008
+  gizmoPadding: 0.05
+  axisLength: 0.25
+  sphereRadius: 1
+  sphereSegments: 48
+  rotationRingRadius: 1.2
+  rotationRingSegments: 64
 --- !u!1 &882521441
 GameObject:
   m_ObjectHideFlags: 0
